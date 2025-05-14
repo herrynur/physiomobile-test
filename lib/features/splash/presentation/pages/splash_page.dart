@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:physiomobile_test/core/presentation/assets/assets.dart';
 import 'package:physiomobile_test/core/presentation/utilities/sizing.dart';
+import 'package:physiomobile_test/core/presentation/utilities/typography.dart';
 import 'package:physiomobile_test/features/splash/application/splash_controller.dart';
 
 class SplashPage extends StatelessWidget {
@@ -34,15 +35,10 @@ class SplashPage extends StatelessWidget {
                     Image.asset(
                       ImageAssets.mainLogo,
                       scale: 1.4,
+                      color: Colors.white,
                     ),
-                    // HeadingText.defaultHeading(
-                    //   text: "HARAPAN JAYA",
-                    //   fontSize: FontSize.h3,s
-                    //   color: Colors.white,
-                    //   margin: EdgeInsets.only(top: SizeValue.size4)
-                    // ),
                     Padding(
-                      padding: EdgeInsets.symmetric(horizontal: screenWidth * .25, vertical: screenWidth * .03),
+                      padding: EdgeInsets.symmetric(horizontal: screenWidth * .25, vertical: screenWidth * .01),
                       child: LinearProgressIndicator(
                         color: Colors.deepOrange,
                         minHeight: 5,
@@ -53,19 +49,19 @@ class SplashPage extends StatelessWidget {
                 );
               },
             ),
-            // Column(
-            //   children: [
-            //     BodyText.extraSmall(
-            //       text: "PT Harapan Jaya Prima",
-            //       color: Colors.white
-            //     ),
-            //     BodyText.extraSmall(
-            //       text: "Version ${FlavorConfig.instance.version}",
-            //       color: Colors.white,
-            //       margin: EdgeInsets.only(bottom: SizeValue.size10)
-            //     )
-            //   ],
-            // )
+            Column(
+              children: [
+                BodyText.extraSmall(
+                  text: "Physiomobile",
+                  color: Colors.white
+                ),
+                BodyText.extraSmall(
+                  text: "Version 1.0.0",
+                  color: Colors.white,
+                  margin: EdgeInsets.only(bottom: SizeValue.size10)
+                )
+              ],
+            )
           ],
         ),
       ),
