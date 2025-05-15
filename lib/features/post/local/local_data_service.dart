@@ -1,6 +1,5 @@
 import 'dart:convert';
-import 'dart:nativewrappers/_internal/vm/lib/developer.dart';
-
+import 'dart:developer';
 import 'package:get_storage/get_storage.dart';
 import 'package:physiomobile_test/features/post/domain/models/post_read_dto.dart';
 

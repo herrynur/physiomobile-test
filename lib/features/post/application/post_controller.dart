@@ -1,5 +1,5 @@
+import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:get/get.dart';
-import 'package:internet_connection_checker_plus/internet_connection_checker_plus.dart';
 import 'package:physiomobile_test/features/post/application/post_var.dart';
 import 'package:physiomobile_test/features/post/domain/repositories/post_repository.dart';
 import 'package:physiomobile_test/features/post/local/local_data_service.dart';
@@ -18,7 +18,8 @@ class PostController extends GetxController {
     PostVar.posts.clear();
 
     //check internet connection
-    if (!await InternetConnection().hasInternetAccess) {
+    final List<ConnectivityResult> connectivityResult = await (Connectivity().checkConnectivity());
+    if (connectivityResult.contains(ConnectivityResult.none)) {
       //get from local storage
       var posts = await LocalDataService().get();
       PostVar.posts.addAll(posts);
