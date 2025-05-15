@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:physiomobile_test/core/presentation/utilities/sizing.dart';
 import 'package:physiomobile_test/features/counter/presentation/pages/counter_page.dart';
+import 'package:physiomobile_test/features/form/presentation/pages/form_page.dart';
 import 'package:physiomobile_test/features/navigation/application/home_navigation_controller.dart';
 import 'package:physiomobile_test/features/navigation/presentation/widgets/home_navigation_child_widget.dart';
 
@@ -48,7 +49,7 @@ class HomeNavigationPage extends StatelessWidget {
                 children: [
                   Container(color: Colors.blue,),
                   CounterPage(),
-                  Container(color: Colors.red,)
+                  FormPage()
                 ],
               );
             },
