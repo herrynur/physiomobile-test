@@ -22,7 +22,7 @@ class BodyText {
         overflow: overflow,
         style: TextStyle(
           decoration: decoration,
-          fontSize: FontSize.h6,
+          fontSize: FontSize.h2,
           fontFamily: "Inter",
           color: color ?? Colors.black,
           fontWeight: weight ?? FontWeight.w400,
