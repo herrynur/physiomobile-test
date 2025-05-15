@@ -7,7 +7,7 @@ import 'package:physiomobile_test/features/counter/presentation/pages/counter_pa
 import 'package:physiomobile_test/features/form/presentation/pages/form_page.dart';
 import 'package:physiomobile_test/features/navigation/application/home_navigation_controller.dart';
 import 'package:physiomobile_test/features/navigation/presentation/widgets/home_navigation_child_widget.dart';
-import 'package:physiomobile_test/post/presentation/pages/post_page.dart';
+import 'package:physiomobile_test/features/post/presentation/pages/post_page.dart';
 
 class HomeNavigationPage extends StatelessWidget {
   HomeNavigationPage({super.key});

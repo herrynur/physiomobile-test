@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:physiomobile_test/core/presentation/utilities/sizing.dart';
 import 'package:physiomobile_test/core/presentation/utilities/typography.dart';
-import 'package:physiomobile_test/post/application/post_controller.dart';
-import 'package:physiomobile_test/post/application/post_var.dart';
-import 'package:physiomobile_test/post/presentation/loading/post_loading.dart';
-import 'package:physiomobile_test/post/presentation/widget/post_list_widget.dart';
+import 'package:physiomobile_test/features/post/application/post_controller.dart';
+import 'package:physiomobile_test/features/post/application/post_var.dart';
+import 'package:physiomobile_test/features/post/presentation/loading/post_loading.dart';
+import 'package:physiomobile_test/features/post/presentation/widget/post_list_widget.dart';
 
 class PostPage extends StatelessWidget {
   PostPage({super.key});
@@ -26,9 +26,14 @@ class PostPage extends StatelessWidget {
             weight: FontWeight.bold
           ),
           actions: [
-            BodyText.extraSmall(
-              text: "Pull to refresh",
-              margin: EdgeInsets.only(right: SizeValue.size10)
+            GetBuilder<PostController>(
+              builder: (_) {
+                return BodyText.extraSmall(
+                  text: PostVar.isHasConnection ? "Pull to refresh" : "No Internet Connection",
+                  color: PostVar.isHasConnection ? Colors.black : Colors.red,
+                  margin: EdgeInsets.only(right: SizeValue.size10)
+                );
+              },
             )
           ],
         ),

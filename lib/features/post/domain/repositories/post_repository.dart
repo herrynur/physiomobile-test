@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
-import 'package:physiomobile_test/post/domain/models/post_read_dto.dart';
-import 'package:physiomobile_test/post/domain/repositories/i_post_repository.dart';
+import 'package:physiomobile_test/features/post/domain/models/post_read_dto.dart';
+import 'package:physiomobile_test/features/post/domain/repositories/i_post_repository.dart';
 
 class PostRepository extends IPostRepository {
   final dio = Dio();
