@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "129785020653",
+    "project_id": "physiomobile-test",
+    "storage_bucket": "physiomobile-test.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:129785020653:android:fd082167f0d2b21ffecce4",
+        "android_client_info": {
+          "package_name": "com.example.physiomobile_test"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBT6EaLSxMgGin1hjDdJwMuDIHPDwIZoIw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
