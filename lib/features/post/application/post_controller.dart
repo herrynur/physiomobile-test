@@ -41,4 +41,9 @@ class PostController extends GetxController {
     PostVar.isLoadingGetPosts = false;
     update();
   }
+
+  Future<bool> isNoConnection() async {
+    final List<ConnectivityResult> connectivityResult = await (Connectivity().checkConnectivity());
+    return connectivityResult.contains(ConnectivityResult.none);
+  }
 }

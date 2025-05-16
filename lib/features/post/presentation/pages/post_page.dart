@@ -40,9 +40,23 @@ class PostPage extends StatelessWidget {
         body: RefreshIndicator(
           onRefresh: () async {
             _postController.getPosts();
+            if (await _postController.isNoConnection()) {
+                const snackBar = SnackBar(content: Text('No Internet Connection, showing data from local storage'));
+                if (context.mounted) {
+                  ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                }
+              }
           },
           child: GetBuilder<PostController>(
             init: _postController,
+            initState: (state) async {
+              if (await _postController.isNoConnection()) {
+                const snackBar = SnackBar(content: Text('No Internet Connection, showing data from local storage'));
+                if (context.mounted) {
+                  ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                }
+              }
+            },
             builder: (_) {
               if (PostVar.isLoadingGetPosts) {
                 return PostLoading.postLoading();
